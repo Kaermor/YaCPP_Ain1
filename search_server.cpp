@@ -103,9 +103,6 @@ int SearchServer::ComputeAverageRating(const std::vector<int>& ratings) {
 }
 
 SearchServer::QueryWord SearchServer::ParseQueryWord(const std::string& text) const {
-    if (text.empty()) {
-        throw std::invalid_argument("Query word is empty"s);
-    }
     std::string word = text;
     bool is_minus = false;
     if (word[0] == '-') {
